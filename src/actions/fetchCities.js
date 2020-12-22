@@ -1,10 +1,18 @@
 
 
-export function fetchCities(action) {
-    // fetch('http://localhost:3002/cities/1')
-    // .then(response => response.json())
-    // .then(data => console.log(data))
-return action
+export function fetchCities() {
+    console.log('inside fetch cities')
+     return (dispatch) => {
+    fetch('http://localhost:3002/cities')
+    .then(response => response.json())
+    .then(data => dispatch({   //GO INTO **reducer and take them this action object
+        type: 'FETCH_CITIES',
+        payload: data
+    }))
+    
+    }
 }
+export default fetchCities
 
-//dispatch(actionObject)
+ ///.then(data => console.log(data))
+

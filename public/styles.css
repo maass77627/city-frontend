@@ -1,0 +1,55 @@
+body {
+    background-image: url("cityty.gif");
+    background-color: #312461;
+    background-repeat: repeat; 
+    background-size: cover; 
+   }
+   
+   
+   h1 {
+    
+    color: green;
+    font-family: 'Lucida Sans';
+   }
+
+   /* div.cc {
+       background-color: #312461;
+       border-radius: 25px;
+       background: #73AD21;
+       padding: 20px;
+       width: 200px;
+       height: 150px;
+   } */
+
+   div.f {
+    background-color: #312461;
+    border-radius: 25px;
+    background: #73AD21;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+
+div.cits {
+    background-color: #312461;
+    border-radius: 25px;
+    background: #217aad;
+    padding: 20px;
+    width: 200px;
+    height: 300px;
+    
+}
+
+ div.home {
+    position: fixed;
+    top: 0;
+    left: 0;
+       background-color: #312461;
+       border-radius: 25px;
+       background: #73AD21;
+       padding: 20px;
+       width: 1000px;
+       height: 700px;
+   }
+
+  
