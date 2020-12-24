@@ -18,13 +18,8 @@ export class App extends React.Component {
 
   render() {
   return (
-    <div className="App">
-      <center>
+    <div >
       
-       <h1>{this.props.username}</h1>
-       "hello world"
-       </center>
-      App
       
     </div>
   );

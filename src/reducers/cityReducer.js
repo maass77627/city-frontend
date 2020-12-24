@@ -5,7 +5,7 @@ export default function cityReducer(state = {username: '', cities: [], allcities
     
     switch (action.type) {
         case 'FETCH_CITIES':
-            return {allcities: action.payload}
+            return {...state, allcities: action.payload}
             case 'ADD_CITIES':
             return {...state, ...state.username.cities.push(action.payload)}
             // case 'FETCH_PICS':

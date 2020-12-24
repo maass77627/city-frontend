@@ -19,8 +19,7 @@ class Login extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.addUsers(this.state)
-        // console.log(this.state)
-       
+  
     }
 
     
@@ -33,10 +32,6 @@ class Login extends React.Component {
           <div>
             <input type="text" name="username" placeholder="Username" onChange={this.handleChange}/>
             <label htmlFor="username">Username</label>
-          </div>
-          <div>
-            {/* <input type="password" name="password" placeholder="Password" onChange={this.handleChange}/>
-            <label htmlFor="password">Password</label> */}
           </div>
           <input type="submit" value="Login" />
           </center>

@@ -1,6 +1,7 @@
 
 import React from 'react'
 import Cities from '../components/Cities'
+//import MyCities from '../containers/MyCities'
 //import CitiesInput from '../components/CitiesInput'
 import {connect} from 'react-redux'
 import {fetchCities} from '../actions/fetchCities'
@@ -20,7 +21,7 @@ import {fetchCities} from '../actions/fetchCities'
             
             <div className="cc">
                 CitiesContainer
-              
+                {/* <MyCities cities={this.props.cities}/> */}
             <Cities allcities={this.props.allcities}/>
             </div>
         )
@@ -29,9 +30,12 @@ import {fetchCities} from '../actions/fetchCities'
 }
 
 const mapStateToProps = (state) => {
-    //console.log(state)
+    console.log(state)
+    debugger
       return {
-      allcities: state.allcities
+          
+      allcities: state.allcities,
+    //   cities: state.username.cities,
       
       }
     }

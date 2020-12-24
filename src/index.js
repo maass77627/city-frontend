@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+//import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 import cityReducer from './reducers/cityReducer'
-import Home from './components/home'
+//import Home from './components/home'
+import MyCities from './containers/MyCities'
 import Navbar from './components/nav'
 import CitiesInput from './components/CitiesInput'
 import CitiesContainer from './containers/CitiesContainer'
@@ -29,12 +30,12 @@ ReactDOM.render(
   <Provider store={store}> 
   <Router>
     <div>
-    <CitiesContainer/>
-    <Navbar/>
-    <Route path="/" component={App} />
-    <Route exact path="/home" component={Home} />
-    <Route exact path="/form" component={CitiesInput} />
    
+    <Navbar/>
+    <Route path="/" component={Login} />
+    <Route exact path="/home" component={MyCities} />
+    <Route exact path="/form" component={CitiesInput} />
+    <Route exact path="/cities" component={CitiesContainer} />
     <Route exact path="/login" component={Login} />
       
       </div>

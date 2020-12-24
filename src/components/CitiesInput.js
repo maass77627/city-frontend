@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addCities} from '../actions/addCities'
+import {MyCities} from '../containers/MyCities'
 
 class CitiesInput extends React.Component {
 
@@ -16,7 +17,7 @@ class CitiesInput extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.addCities(this.state)
-        console.log(this.state)
+       
     }
 
 
