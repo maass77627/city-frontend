@@ -7,6 +7,7 @@ import React from 'react'
 import CitiesContainer from './containers/CitiesContainer'
 
 export class App extends React.Component {
+  
 
   // componentDidMount() {
   //   this.props.fetchCities({type: 'FETCH_CITIES'})
@@ -18,8 +19,13 @@ export class App extends React.Component {
   render() {
   return (
     <div className="App">
+      <center>
+      
+       <h1>{this.props.username}</h1>
+       "hello world"
+       </center>
       App
-      <CitiesContainer/>
+      
     </div>
   );
 }

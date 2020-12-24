@@ -8,11 +8,15 @@ import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 import cityReducer from './reducers/cityReducer'
 import Home from './components/home'
-// Step 1. Import react-router functions
+import Navbar from './components/nav'
+import CitiesInput from './components/CitiesInput'
+import CitiesContainer from './containers/CitiesContainer'
+import Login from './components/login'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-//let reducer = ''
+//import fetchCities from './actions/fetchCities';
 
-const composeEnhancers = window._REDUX_DEVTOOLS_EXTENSION_COMPOSE_ || compose;
+// window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 let store = createStore(cityReducer, composeEnhancers(applyMiddleware(thunk)))
 // let store = createStore(composeEnhancers, applyMiddleware(thunk))
@@ -20,12 +24,18 @@ let store = createStore(cityReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render( 
   
+
      //Provider connects app and children of app to store
   <Provider store={store}> 
   <Router>
     <div>
+    <CitiesContainer/>
+    <Navbar/>
     <Route path="/" component={App} />
     <Route exact path="/home" component={Home} />
+    <Route exact path="/form" component={CitiesInput} />
+   
+    <Route exact path="/login" component={Login} />
       
       </div>
   </Router>), 

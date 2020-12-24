@@ -27,9 +27,9 @@ class CitiesInput extends React.Component {
             <div className="f">
                 <form onSubmit={this.handleSubmit}>
                 
-                <input type="text" placeholder="name" name="name" value={this.state.name} onChange={this.handleChange}></input><br></br>
-                <input type="text" placeholder="state" name="state" value={this.state.state} onChange={this.handleChange}></input><br></br>
-                <input type="text" placeholder="description" name="description" value={this.state.description} onChange={this.handleChange}></input><br></br>
+                <input type="text" placeholder="name" name="name" value={this.state.name} onChange={this.handleChange}></input><br></br><br></br>
+                <input type="text" placeholder="state" name="state" value={this.state.state} onChange={this.handleChange}></input><br></br><br></br>
+                <input type="text" placeholder="description" name="description" value={this.state.description} onChange={this.handleChange}></input><br></br><br></br>
                 <input type="submit"/>
                 </form>
             </div>

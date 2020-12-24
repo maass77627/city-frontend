@@ -3,9 +3,11 @@ import React from 'react'
 const Cities = (props) => {
     console.log(props)
 
+    
+
     return(
         <div className="cits">
-           {props.cities.map(city => <li key={city.id}>{city.name},<br></br> {city.state},<br></br> {city.description}</li>)}
+           {props.allcities.map(city => <div id="c"key={city.id}>{city.name},<br></br> {city.state},<br></br> {city.description}</div>)}
         </div>
     )
 
