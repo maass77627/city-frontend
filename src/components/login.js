@@ -1,28 +1,23 @@
 import React from 'react'
 import {connect} from 'react-redux'
- import {addUsers} from '../actions/addUsers'
- import App from '../App';
-
+import {addUsers} from '../actions/addUsers'
+import App from '../App';
 
 class Login extends React.Component {
 
-    state = {username: ''}
+  state = {username: ''}
 
 
-    handleChange = (event) => {
+  handleChange = (event) => {
         this.setState({
            [event.target.name]: event.target.value
         })
-        
-    }
+  }
 
-    handleSubmit = (event) => {
+  handleSubmit = (event) => {
         event.preventDefault()
         this.props.addUsers(this.state)
-  
-    }
-
-    
+  }
 
     render() {
     return (

@@ -1,30 +1,17 @@
 body {
     background-color: #b1aaa1;
     background-repeat: repeat; 
-    
-   }
+    }
    
-   
-   h1 {
-   
+    h1 {
     font-size: 63px;
     color: teal;
     text-decoration: underline;
     font-family: 'Baker Street Black';
     font-weight: 800;
-   }
-
-   /* div.cc {
-       background-color: #312461;
-       border-radius: 25px;
-       background: #73AD21;
-       padding: 20px;
-       width: 200px;
-       height: 150px;
-   } */
+    }
 
    div.f {
-    /* margin: 0 auto; */
     position: fixed;
      top: 250px;
      left: 525px;
@@ -33,10 +20,9 @@ body {
     padding: 20px;
     width: 200px;
     height: 200px;
-}
+    }
 
 div.App {
-    /* margin: 0 auto; */
     position: fixed;
      top: 250px;
      left: 0px;
@@ -45,7 +31,7 @@ div.App {
     padding: 20px;
     width: 200px;
     height: 200px;
-}
+    }
 
 div#a {
     float: left;
@@ -56,21 +42,20 @@ div#a {
     height: 200px;
     margin-right: 10px;
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 30px;
     margin-left: 10px;
-    
-}
+    }
 
  div.home {
     position: fixed;
     top: 250px;
     left: 400px;
-       background-color: #312461;
-       border-radius: 25px;
-       background: #73AD21;
-       padding: 20px;
-       width: 600px;
-       height: 600px;
+    background-color: #312461;
+    border-radius: 25px;
+    background: #73AD21;
+    padding: 20px;
+    width: 600px;
+    height: 600px;
    }
 
    div.navbar {
@@ -79,12 +64,10 @@ div#a {
     position: fixed;
     top: 100px;
     left: 0;
-       /* background-color: #312461; */
-       border-radius: 25px;
-       /* background: #94998c; */
-       padding: 40px;
-       width: 1400px;
-       height: 20px;
+    border-radius: 25px;
+    padding: 40px;
+    width: 1400px;
+    height: 20px;
    }
 
    input[type=text] {
@@ -99,34 +82,18 @@ div#a {
     position: fixed;
     top: 250px;
     left: 525px;
-   border-radius: 25px;
-   background: pink;
-   padding: 20px;
-   width: 200px;
-   height: 200px;
+    border-radius: 25px;
+    background: pink;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
 }
-
-  
-/* .grid-container {
-    display: grid;
-  height: 400px;
-  align-content: space-evenly;
-  grid-template-columns: auto auto auto;
-  grid-gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
-  }
-  .grid-container > div#c {
-   border-radius: 25px;
-   background: pink;
-   padding: 20px;
-   width: 100px;
-   height: 100px;
-} */
 
 div#c {
     float: left;
     border-radius: 25px;
+    color: rgb(245, 1, 192);
+    font-weight: bold;
     background: pink;
     padding: 20px;
     width: 200px;
