@@ -15,6 +15,8 @@ export const addUsers = (data) => {
       type: 'ADD_USERS',
       payload: data
   }))
+    }
+}
 
-}}
+
 

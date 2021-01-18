@@ -1,5 +1,6 @@
 import React from 'react'
 import Cities from '../components/Cities'
+// import MyCities from '../components/MyCities'
 import {connect} from 'react-redux'
 import {fetchCities} from '../actions/fetchCities'
 
@@ -7,9 +8,9 @@ import {fetchCities} from '../actions/fetchCities'
 import addPicRef from '../actions/addPicRef'
 
 class CitiesContainer extends React.Component {
+    
 
     componentDidMount() {
-        console.log("CitiesContainer", this.props.dispatch)
         if (this.props.allcities.length === 0){this.props.fetchCities()}
         
     }
@@ -28,7 +29,10 @@ class CitiesContainer extends React.Component {
             
             <div className="cc">
                 CitiesContainer
+               
                 <Cities allcities={this.props.allcities}/>
+               
+                
             </div>
         )}}
 
@@ -39,3 +43,18 @@ const mapStateToProps = (state) => {
     }
 
 export default connect(mapStateToProps, {fetchCities, fetchPic})(CitiesContainer)
+
+// render () {
+//     if() {
+//       return (
+//         <div>
+//           <MyCities allcities={this.props.allcities}/>
+//         </div>
+//       );
+//     } else {
+//       return (
+//         <div>
+//           <Cities allcities={this.props.allcities}/>
+//         </div>
+//       );
+//     }

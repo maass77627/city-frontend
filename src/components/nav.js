@@ -24,9 +24,9 @@ class Navbar extends React.Component {
           activeStyle={{
             background: 'pink'
           }}
-        >bucketlist</NavLink>
+        >login</NavLink>
         <NavLink
-          to="/home"
+          to="/mycities"
           exact
           style={link}
           activeStyle={{
@@ -50,13 +50,13 @@ class Navbar extends React.Component {
           }}
         >All Cities</NavLink>
         <NavLink
-          to="/login"
+          to="/bucketlist"
           exact
           style={link}
           activeStyle={{
             background: 'pink'
           }}
-        >Login</NavLink>
+        >bucketlist</NavLink>
       </div>
     )
     }}

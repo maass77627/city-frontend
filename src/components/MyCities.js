@@ -1,20 +1,27 @@
 import React from 'react'
-// import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import fetchPicTwo from '../actions/fetchPicTwo'
+import addPicRef from '../actions/addPicRef'
 
 export class MyCities extends React.Component {
 
-    // constructor(props) {
-    //     super()
-    //     this.state = {
-    //         mycities: props.mycities,
-    //     }
-    // }
+    componentDidMount() {
+        console.log("update")
+            if (this.props.mycities.length > 0) {
+            this.props.mycities.forEach(city => {
+                addPicRef(city)
+               .then(picRef => this.props.fetchPicTwo(city, picRef))
+             })
+            }
+    }
+   
 
     render() {
+        
     return(
+        
         <div className="mycities">
-            {this.props.mycities.map(city => <div id="a" key={city.id}>{city.name},<br></br> {city.state},<br></br> {city.description}</div>)}
+            {this.props.mycities.map(city =>  <div id="a" key={city.id}>{city.name},<br></br> {city.state},<br></br> <img src={city.imgUrl} alt=""/> <br></br> {city.description}</div>)}
         </div>
     )
 }
@@ -23,25 +30,13 @@ export class MyCities extends React.Component {
 const mapStateToProps = (state) => {
       return {
       mycities: state.mycities
+
       }
 }
 
     MyCities.defaultProps = {name: 'juno', state: 'alaska', description: 'cold'}
+  
+   export default connect(mapStateToProps, {fetchPicTwo})(MyCities)
 
-    export default connect(mapStateToProps, null)(MyCities)
 
-
-//     import React from 'react'
-
-// const MyCities = (props) => {
     
-//     return(
-//         <div className="mycities">
-//            {props.mycities.map(city => <div id="a"key={city.id}>{city.name},<br></br> {city.state},<br></br> {city.description}</div>)}
-//         </div>
-//     )
-
-// }
-// export default MyCities
-
-// MyCities.defaultProps = {name: 'juno', state: 'alaska', description: 'cold'}

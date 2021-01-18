@@ -5,7 +5,7 @@ import App from '../App';
 
 class Login extends React.Component {
 
-  state = {username: ''}
+  state = {username: '', password: '', id: ''}
 
 
   handleChange = (event) => {
@@ -16,12 +16,14 @@ class Login extends React.Component {
 
   handleSubmit = (event) => {
         event.preventDefault()
+        let loginn = document.getElementById("4")
+        loginn.style.display = "none";
         this.props.addUsers(this.state)
   }
 
     render() {
     return (
-      <div className="login">
+      <div id="4" className="login">
         <form onSubmit={this.handleSubmit}>
             <center>
           <div>

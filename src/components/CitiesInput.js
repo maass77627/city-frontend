@@ -1,15 +1,11 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addCities} from '../actions/addCities'
-// import {MyCities} from '../components/MyCities'
+
 
 class CitiesInput extends React.Component {
 
     state = {name: '', state: '', description: ''}
-
-    // componentDidMount() {
-    //     this.props.addCities()
-    // }
 
 
     handleChange = (event) => {
@@ -20,17 +16,15 @@ class CitiesInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
+        let cityinput = document.getElementById("f")
+        cityinput.style.display = "none";
         this.props.addCities(this.state)
-       
-    }
+       }
 
-
-
-
-    render() {
+     render() {
         return(
             
-            <div className="f">
+            <div id="f" className="f">
                 <form onSubmit={this.handleSubmit}>
                 
                 <input type="text" placeholder="name" name="name" value={this.state.name} onChange={this.handleChange}></input><br></br><br></br>
@@ -38,7 +32,7 @@ class CitiesInput extends React.Component {
                 <input type="text" placeholder="description" name="description" value={this.state.description} onChange={this.handleChange}></input><br></br><br></br>
                 <input type="submit"/>
                 </form>
-                {/* <MyCities mycities={this.props.mycities}/> */}
+               
             </div>
         )
     }
@@ -46,11 +40,5 @@ class CitiesInput extends React.Component {
 
    
 }
-
-// const mapStateToProps = (state) => {
-//     return {
-//    mycities: state.username.cities,
-//      }
-//   }
 
 export default connect(null, {addCities})(CitiesInput)
