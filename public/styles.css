@@ -103,5 +103,36 @@ div#c {
     margin-top: 10px;
     margin-left: 10px;
  }
+
+ div#d {
+    float: left;
+    border-radius: 25px;
+    color: rgb(245, 1, 192);
+    font-weight: bold;
+    background: pink;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+ }
   
+ div#h {
+    position: fixed;
+    top: 250px;
+    left: 525px;
+
+
+ }
+
+ button {
+height: 100px;
+width: 100px;
+ position: fixed;
+    top: 250px;
+    left: 525px;
+
+ }
   

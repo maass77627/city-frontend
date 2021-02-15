@@ -1,6 +1,6 @@
-//import update from 'immutability-helper';
 
-export default function cityReducer(state = {users: [], mycities: [], allcities: []}, action) { // whatever we return from reducer is the new state
+
+export default function cityReducer(state = {users: [], mycities: [], bucketlist: [], allcities: []}, action) { // whatever we return from reducer is the new state
      console.log(action.payload)
      console.log("in reducer")
     
@@ -44,6 +44,8 @@ export default function cityReducer(state = {users: [], mycities: [], allcities:
             return {...state, ...state.mycities.push(action.payload)}
         case 'ADD_USERS':
             return {...state, ...state.users.push(action.payload)}
+            case 'ADD_BUCKETLIST':
+                return {...state, ...state.bucketlist.push(action.payload)}
         default:
             return state
     }

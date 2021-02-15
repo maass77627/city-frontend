@@ -14,14 +14,20 @@ export class MyCities extends React.Component {
              })
             }
     }
+
+    handleClick = (e) => {
+        e.preventDefault();
+        console.log('The link was clicked.');
+        
+    }
    
 
     render() {
-        
+       
     return(
         
         <div className="mycities">
-            {this.props.mycities.map(city =>  <div id="a" key={city.id}>{city.name},<br></br> {city.state},<br></br> <img src={city.imgUrl} alt=""/> <br></br> {city.description}</div>)}
+            {this.props.mycities.map(city =>  <div  style={{backgroundColor: "lightblue"}} onClick={this.handleClick} id="c" key={city.id}>{city.name},<br></br> {city.state},<br></br> <img src={city.imgUrl} alt=""/> <br></br> {city.description}</div>)}
         </div>
     )
 }
@@ -29,7 +35,8 @@ export class MyCities extends React.Component {
  
 const mapStateToProps = (state) => {
       return {
-      mycities: state.mycities
+      mycities: state.mycities,
+      users: state.users
 
       }
 }

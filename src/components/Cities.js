@@ -1,15 +1,49 @@
 import React from 'react'
 
-const Cities = (props) => {
-    console.log(props.allcities)
+import {connect} from 'react-redux'
 
-  return(
-        <div className="cits" >,
-        {props.allcities.map(city => 
-        <div id="c" className={city.id} key={city.id}> <center> {city.name}, {city.state},<br></br> <img src={city.imgUrl} alt=""/> </center> <br></br> {city.description} </div>)}
-        </div>
-    )
+  class Cities extends React.Component {
+
+    state = {
+      bucketItems: []
     }
-export default Cities
 
+    mybucketlist = () => {
+
+    }
+
+   
+handleClick = (e) => {
+        e.preventDefault();
+        
+        let integer = parseInt(e.currentTarget.className, 10);
+        let newcity = this.props.allcities.find(city => city.id === integer);
+        
+        this.props.dispatch({type: 'ADD_BUCKETLIST', payload: newcity})
+        
+        this.setState({
+          bucketItems: [
+            ...this.state.bucketItems, newcity
+          ]
+        })
+
+     
+    }
+    
+   render() {
+      
+  return( 
+        <div className="cits" >,
+        
+        {this.props.allcities.map(city => 
+        <div  onClick={this.handleClick} id="c" className={city.id} key={city.id}> <center> {city.name}, {city.state},<br></br> <img src={city.imgUrl} alt=""/> </center> <br></br> {city.description} </div>)}
+
+        </div>
+          
+    )
+
+        }
+        
+    }
+export default connect(state => ({ bucketlist: state.bucketlist }))(Cities);
 

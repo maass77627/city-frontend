@@ -23,16 +23,12 @@ ReactDOM.render(
    <Navbar/>
     <Route exact path="/" component={Login} />
     <Route exact path="/form" component={CitiesInput} />
-    
     <Route exact path="/cities" component={CitiesContainer} />
-    {/* <Route exact path='/cities' render={props => <CitiesContainer path={true} />}/> */}
     <Route exact path="/bucketlist" component={Home} />
     <Route exact path="/mycities" component={MyCities} />
-    {/* <Route exact path='/home' render={props => <CitiesContainer path={false} />}/> */}
      </div>
   </Router>), 
-    
- </Provider>,
+  </Provider>,
   document.getElementById('root')
 );
 
