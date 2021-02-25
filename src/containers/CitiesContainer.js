@@ -25,7 +25,6 @@ class CitiesContainer extends React.Component {
     render() {
         return(
             <div className="cc">
-                CitiesContainer
                <Cities allcities={this.props.allcities}/>
                 </div>
         )}}

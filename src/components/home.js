@@ -8,6 +8,8 @@ render() {
   return (
     
       <div className="bucket" >
+
+        <h2>My Bucketlist</h2>
       
         {this.props.bucketlist.map(city => 
         <div   id="d" className={city.id} key={city.id}> <center> {city.name}, {city.state},<br></br> <img src={city.imgUrl} alt=""/> </center> <br></br> {city.description} </div>)}

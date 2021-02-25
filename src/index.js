@@ -6,7 +6,7 @@ import {createStore, applyMiddleware, compose} from 'redux';
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 import cityReducer from './reducers/cityReducer'
- import MyCities from './components/MyCities'
+import MyCities from './components/MyCities'
 import Navbar from './components/nav'
 import CitiesInput from './components/CitiesInput'
 import CitiesContainer from './containers/CitiesContainer'

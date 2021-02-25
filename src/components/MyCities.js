@@ -1,4 +1,5 @@
 import React from 'react'
+// import { AnimationWrapper } from 'react-hover-animation'
 import { connect } from 'react-redux'
 import fetchPicTwo from '../actions/fetchPicTwo'
 import addPicRef from '../actions/addPicRef'
@@ -25,10 +26,14 @@ export class MyCities extends React.Component {
     render() {
        
     return(
-        
+       
         <div className="mycities">
+            <h2>The Places Ive Been...</h2>
+            
             {this.props.mycities.map(city =>  <div  style={{backgroundColor: "lightblue"}} onClick={this.handleClick} id="c" key={city.id}>{city.name},<br></br> {city.state},<br></br> <img src={city.imgUrl} alt=""/> <br></br> {city.description}</div>)}
+
         </div>
+        
     )
 }
 }

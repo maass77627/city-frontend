@@ -2,9 +2,10 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 
 const link = {
+  height: '60px',
   width: '100px',
   padding: '20px',
-  borderRadius: '25px',
+  borderRadius: '10px',
   margin: '0px 50px 10px 120px',
   background: 'grey',
   fontSize: 'medium',
