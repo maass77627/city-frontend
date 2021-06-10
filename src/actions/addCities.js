@@ -8,7 +8,7 @@
 export const addCities = (data) => {
     console.log(data)
     return (dispatch) => {
-        fetch('http://localhost:3002/cities',{
+        fetch('http://localhost:3003/cities',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

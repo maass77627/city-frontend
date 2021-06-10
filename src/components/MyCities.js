@@ -3,6 +3,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import fetchPicTwo from '../actions/fetchPicTwo'
 import addPicRef from '../actions/addPicRef'
+import Counter from '../components/Counter'
 
 export class MyCities extends React.Component {
 
@@ -28,8 +29,8 @@ export class MyCities extends React.Component {
     return(
        
         <div className="mycities">
-            <h2>The Places Ive Been...</h2>
             
+            <Counter/>
             {this.props.mycities.map(city =>  <div  style={{backgroundColor: "lightblue"}} onClick={this.handleClick} id="c" key={city.id}>{city.name},<br></br> {city.state},<br></br> <img src={city.imgUrl} alt=""/> <br></br> {city.description}</div>)}
 
         </div>

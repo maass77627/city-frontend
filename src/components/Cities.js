@@ -1,3 +1,4 @@
+
 import React from 'react'
 
 import {connect} from 'react-redux'
@@ -36,8 +37,8 @@ handleClick = (e) => {
         <div className="cits" >
         
         {this.props.allcities.map(city => 
-        <div  onClick={this.handleClick} id="c" className={city.id} key={city.id}> <center> {city.name}, {city.state},<br></br> <img src={city.imgUrl} alt=""/> </center> <br></br> {city.description} </div>)}
-
+        <div  onClick={this.handleClick} id="c" className={city.id} key={city.id}> <center> {city.name}, {city.state},<br></br> <img src={city.imgUrl} alt=""/> </center> <br></br> <center>{city.description}</center> </div>)}
+       
         </div>
           
     )
@@ -47,3 +48,4 @@ handleClick = (e) => {
     }
 export default connect(state => ({ bucketlist: state.bucketlist }))(Cities);
 
+// Cities.defaultProps = {name: 'juno', state: 'alaska', description: 'cold'}

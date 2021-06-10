@@ -11,6 +11,7 @@ import Navbar from './components/nav'
 import CitiesInput from './components/CitiesInput'
 import CitiesContainer from './containers/CitiesContainer'
 import Login from './components/login'
+
 import Home from './components/home'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

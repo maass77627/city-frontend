@@ -12,10 +12,11 @@ class CitiesInput extends React.Component {
         this.setState({
            [event.target.name]: event.target.value
         })
-    }
+    } 
 
     handleSubmit = (event) => {
         event.preventDefault()
+        
         let cityinput = document.getElementById("f")
         cityinput.style.display = "none";
         this.props.addCities(this.state)

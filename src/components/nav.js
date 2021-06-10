@@ -2,9 +2,9 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 
 const link = {
-  height: '60px',
+  height: '50px',
   width: '100px',
-  padding: '20px',
+  padding: '10px',
   borderRadius: '10px',
   margin: '0px 50px 10px 120px',
   background: 'grey',
@@ -23,7 +23,7 @@ class Navbar extends React.Component {
           exact
           style={link}
           activeStyle={{
-            background: 'pink'
+            background: 'teal'
           }}
         >login</NavLink>
         <NavLink
@@ -31,7 +31,7 @@ class Navbar extends React.Component {
           exact
           style={link}
           activeStyle={{
-            background: 'pink'
+            background: 'teal'
           }}
         >My Cities</NavLink>
         <NavLink
@@ -39,7 +39,7 @@ class Navbar extends React.Component {
           exact
           style={link}
           activeStyle={{
-            background: 'pink'
+            background: 'teal'
           }}
         >New City</NavLink>
         <NavLink
@@ -47,7 +47,7 @@ class Navbar extends React.Component {
           exact
           style={link}
           activeStyle={{
-            background: 'pink'
+            background: 'teal'
           }}
         >All Cities</NavLink>
         <NavLink
@@ -55,7 +55,7 @@ class Navbar extends React.Component {
           exact
           style={link}
           activeStyle={{
-            background: 'pink'
+            background: 'teal'
           }}
         >bucketlist</NavLink>
       </div>

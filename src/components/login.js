@@ -5,7 +5,7 @@ import App from '../App';
 
 class Login extends React.Component {
 
-  state = {username: '', password: '', id: ''}
+  state = {username: '', password: ''}
 
 
   handleChange = (event) => {
@@ -16,6 +16,7 @@ class Login extends React.Component {
 
   handleSubmit = (event) => {
         event.preventDefault()
+        console.log(this.state)
         let loginn = document.getElementById("4")
         loginn.style.display = "none";
         this.props.addUsers(this.state)
@@ -27,8 +28,10 @@ class Login extends React.Component {
         <form onSubmit={this.handleSubmit}>
             <center>
           <div>
-            <input type="text" name="username" placeholder="Username" onChange={this.handleChange}/>
+            <input type="text" name="username" placeholder="Username" value={this.state.username} onChange={this.handleChange}/>
             <label htmlFor="username">Username</label>
+            <input type="text" name="password" placeholder="Password" value={this.state.password} onChange={this.handleChange}/>
+            <label htmlFor="password">Password</label>
           </div>
           <input type="submit" value="Login" />
           </center>
