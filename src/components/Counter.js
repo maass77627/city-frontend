@@ -1,53 +1,53 @@
-import React from 'react'
+// import React from 'react'
 
-class Counter extends React.Component {
+// class Counter extends React.Component {
 
-    constructor() {
-        super()
-        this.state = {
-            characters: 0,
-            count: 0,
+//     constructor() {
+//         super()
+//         this.state = {
+//             characters: 0,
+//             count: 0,
             
-        }
-    }
+//         }
+//     }
 
-    handleChange = (event) => {
-        this.setState({
-            characters: event.target.value.length
-        })
+//     handleChange = (event) => {
+//         this.setState({
+//             characters: event.target.value.length
+//         })
         
-       }
+//        }
 
-       handleClick = (event) => {
-           alert("Im clicked")
-           let newState = this.state.characters  
-            this.setState(previousState => {
-      return {
-        count: previousState.count + newState
-        // count: newState
-      }
+//        handleClick = (event) => {
+        
+//            let newState = this.state.characters  
+//             this.setState(previousState => {
+//       return {
+//         count: previousState.count + newState
+       
+//       }
       
-    })
-    console.log(this.state)
-       }
+//     })
+//     console.log(this.state)
+//        }
       
       
-       render() {
+//        render() {
 
-        return(
-            <div>
-                <input id="new" onChange={this.handleChange}></input>
-                <button onClick={this.handleClick}>Click Me</button> 
-                 <p id="counter">{this.state.count}</p> 
+//         return(
+//             <div>
+//                 <input id="new" onChange={this.handleChange}></input>
+//                 <button onClick={this.handleClick}>Click Me</button> 
+//                  <p id="counter">{this.state.count}</p> 
 
                 
-            </div>
+//             </div>
            
           
            
-        )
-        }
+//         )
+//         }
 
-}
+// }
 
-export default Counter; 
+// export default Counter; 

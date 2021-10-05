@@ -29,12 +29,13 @@ export class MyCities extends React.Component {
     return(
        
         <div className="mycities">
-            
-            <Counter/>
-            {this.props.mycities.map(city =>  <div  style={{backgroundColor: "lightblue"}} onClick={this.handleClick} id="c" key={city.id}>{city.name},<br></br> {city.state},<br></br> <img src={city.imgUrl} alt=""/> <br></br> {city.description}</div>)}
-
+            {/* <Counter/> */}
+            {this.props.mycities.map(city =>  <div  style={{backgroundColor: "lightblue"}}  id="c" key={city.id}> {city.name},<br></br> {city.state},<br></br> <img src={city.imgUrl} alt=""/> <br></br> {city.description} <br></br> <button>hi</button></div>)}
+        {/* <button className="likeBtn">
+           
+        </button> */}
         </div>
-        
+        // onClick={this.handleClick}
     )
 }
 }
@@ -43,8 +44,7 @@ const mapStateToProps = (state) => {
       return {
       mycities: state.mycities,
       users: state.users
-
-      }
+    }
 }
 
     MyCities.defaultProps = {name: 'juno', state: 'alaska', description: 'cold'}

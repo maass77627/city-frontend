@@ -28,7 +28,7 @@ ReactDOM.render(
     <Route exact path="/bucketlist" component={Home} />
     <Route exact path="/mycities" component={MyCities} />
      </div>
-  </Router>), 
+  </Router> 
   </Provider>,
   document.getElementById('root')
 );

@@ -15,8 +15,7 @@ class CitiesInput extends React.Component {
     } 
 
     handleSubmit = (event) => {
-        event.preventDefault()
-        
+        event.preventDefault();
         let cityinput = document.getElementById("f")
         cityinput.style.display = "none";
         this.props.addCities(this.state)

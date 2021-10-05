@@ -2,7 +2,8 @@
 import React from 'react'
 
 import {connect} from 'react-redux'
-
+import { FaCarSide } from 'react-icons/fa';
+import Description from '../components/Description'
   class Cities extends React.Component {
 
     state = {
@@ -10,6 +11,14 @@ import {connect} from 'react-redux'
     }
 
     mybucketlist = () => {
+
+    }
+
+    handleClickTwo = (value) => {
+      //  e.preventDefault();
+     console.log(value);
+     <Description/>
+    
 
     }
 
@@ -37,15 +46,16 @@ handleClick = (e) => {
         <div className="cits" >
         
         {this.props.allcities.map(city => 
-        <div  onClick={this.handleClick} id="c" className={city.id} key={city.id}> <center> {city.name}, {city.state},<br></br> <img src={city.imgUrl} alt=""/> </center> <br></br> <center>{city.description}</center> </div>)}
+        
+        <div  onClick={this.handleClick} id="c" className={city.id} key={city.id}> 
+        <button className="heart" onClick={this.handleClickTwo(city.id)}><FaCarSide color="#006666" size="20px" /></button> <center> {city.name},<br></br> {city.state},<br></br> <img src={city.imgUrl} alt=""/> </center> <br></br> <center>{city.description} <br></br> </center> 
+        </div>)}
        
         </div>
           
     )
 
-        }
+   }
         
     }
 export default connect(state => ({ bucketlist: state.bucketlist }))(Cities);
-
-// Cities.defaultProps = {name: 'juno', state: 'alaska', description: 'cold'}
